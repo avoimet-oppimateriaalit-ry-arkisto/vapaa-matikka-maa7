@@ -1,1 +1,91 @@
 \chapter{Rationaalifunktiot}
+
+\section{Rationaalifunktion määritelmä}
+
+\termi{rationaalifunktio}{Rationaalifunktioiksi} kutsutaan funktioita, jotka voidaan esittää kahden
+polynomifunktion osamääränä.
+
+\begin{esimerkki}
+	Rationaalifunktioita ovat esimerkiksi
+	\begin{alakohdat}
+		\alakohta{$x^2 = \frac{x^2}{1}$}
+		\alakohta{$\frac1x$}
+		\alakohta{$1+\frac2x+\frac1{x^2} = \frac{x^2+2x+1}{x^2}$}
+		\alakohta{$\frac{x+1}{x-1}$}
+	\end{alakohdat}
+\end{esimerkki}
+
+\section{Rationaalilausekkeiden sieventäminen}
+
+\section{Rationaaliyhtälöt}
+
+\begin{esimerkki}
+	Ratkaise yhtälöt
+	\begin{alakohdat}
+		\alakohta{$\frac{2x+12}{x} = 8$}
+		\alakohta{$\frac{2x+12}{x} = 2$}
+		\alakohta{$\frac{2x+12}{x} = -4$}
+	\end{alakohdat}
+	\begin{esimratk}
+		Ratkaistaan yleinen tapaus $\frac{2x+12}{x} = c$, missä $c \in \rr$.
+		Todetaan ensin, että $x = 0$ ei voi olla yhtälön ratkaisu. Muulloin:
+		\begin{align*}
+			\frac{2x+12}{x} &= c \\
+			2x+12 &= cx \\
+			(2-c)x+12 &= 0 \\
+			(2-c)x &= -12 \\
+			x &= \frac{-12}{2-c} \\
+			x &= \frac{12}{c-2}
+		\end{align*}
+		Havaitaan, että kun $c = 2$, ratkaisuja ei ole. Muut ratkaisut saadaan sijoittamalla.
+	\end{esimratk}
+	\begin{esimvast}
+		\begin{alakohdat}
+			\alakohta{$x = 2$}
+			\alakohta{ei ratkaisuja}
+			\alakohta{$x = -2$}
+		\end{alakohdat}
+	\end{esimvast}
+\end{esimerkki}
+
+\section{Rationaaliepäyhtälöt}
+
+\begin{esimerkki}
+	Ratkaise epäyhtälöt
+	\begin{alakohdat}
+		\alakohta{$\frac{2x+7}{x+10} < 1$}
+		\alakohta{$\frac{2x+7}{x+10} > -1$}
+		\alakohta{$|\frac{2x+7}{x+10}| < 1$.}
+	\end{alakohdat}
+	\begin{esimratk}
+		\begin{alakohdat}
+			\alakohta{
+				\begin{align*}
+					\frac{2x+7}{x+10} &< 1 \\
+					\frac{2x+7-x-10}{x+10} &< 0 \\
+					\frac{x-3}{x+10} &< 0
+				\end{align*}
+				$(x-3)$ ja $(x+10)$ ovat erimerkkisiä, kun $-10 < x < 3$.
+			}
+			\alakohta{
+				\begin{align*}
+					\frac{2x+7}{x+10} &> -1 \\
+					\frac{2x+7+x+10}{x+10} &> 0 \\
+					\frac{3x+17}{x+10} &> 0
+				\end{align*}
+				$(3x+17)$ ja $(x+10)$ ovat samanmerkkisiä, kun $x < -10 \;\tai x > \frac{-17}3$.
+			}
+			\alakohta{
+				Itseisarvoepäyhtälö toteutuu, kun molemmat edellä olleet epäyhtälöt toteutuvat,
+				eli kun $\frac{-17}{3} < x < 3$.
+			}
+		\end{alakohdat}
+	\end{esimratk}
+	\begin{esimvast}
+		\begin{alakohdat}
+			\alakohta{$-10 < x < 3$}
+			\alakohta{$x < -10 \;\tai x > \frac{-17}3$}
+			\alakohta{$\frac{-17}{3} < x < 3$}
+		\end{alakohdat}
+	\end{esimvast}
+\end{esimerkki}
