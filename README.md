@@ -13,7 +13,7 @@
 * Ohjeet kirjoittajille [wikissä](https://github.com/avoimet-oppimateriaalit-ry/vapaa-matikka/wiki).
 
 Tekniset yksityiskohdat:
-* Ladontajärjestelmä: LaTeX
+* Ladontajärjestelmä: XeLaTeX
 
 * Versionhallinta: Git/GitHub
 
@@ -41,7 +41,7 @@ Linkkejä:
 * Technical notes etc. on [wiki](https://github.com/avoimet-oppimateriaalit-ry/vapaa-matikka/wiki).
 
 Technical details:
-* Typesetting: LaTeX
+* Typesetting: XeLaTeX
 
 * Version control: Git/GitHub
 
