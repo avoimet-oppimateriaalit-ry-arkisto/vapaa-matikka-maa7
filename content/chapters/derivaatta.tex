@@ -1,5 +1,47 @@
 \chapter{Derivaatta}
 
+% motivaatio, fysikaalinen
+% sääntöjen todistamista
+
+Matematiikassa funktion kasvunopeus selvitetään \termi{derivointi}{derivoinniksi} kutsutulla operaatiolla.
+
+Funktion $f(x)$ \termi{derivaatta}{derivaattaa} pisteessä $a$ merkitään $f'(a)$.
+Formaalisti derivaatta määritellään
+\[ f'(a) = \lim\limits_{x \to a} \frac{f(x)-f(a)}{x-a} \]
+tai yhtäpitävästi
+\[ f'(a) = \lim\limits_{h \to 0} \frac{f(a+h)-f(a)}{h}. \]
+Tämä määritelmä tunnetaan nimellä \termi{erotusosamäärän raja-arvo}{erotusosamäärän raja-arvo}.
+
+\begin{esimerkki}
+	Laske funktion $f(x) = x^2$ derivaatta pisteessä $3$.
+	\begin{esimratk}
+		\begin{align*}
+			f'(3) &= \lim\limits_{x \to 3} \frac{f(x)-f(3)}{x-3} \\
+				  &= \lim\limits_{x \to 3} \frac{x^2-9}{x-3} \\
+				  &= \lim\limits_{x \to 3} (x+3) \\
+				  &= 6
+		\end{align*}
+	\end{esimratk}
+\end{esimerkki}
+
+Funktion $f(x)$ derivaatalle pisteessä $a$ on geometrinen tulkinta:
+$f'(a)$ on funktion $f(x)$ tangentin kulmakerroin pisteessä $a$.
+
+Erityisen mielenkiintoisia ovat kysymykset, jotka ovat muotoa
+''milloin funktio ei kasva?'' Ne vastaavat tilannetta, jossa tangentti
+on vaakasuora eli funktion derivaatta on $0$.
+
+Selvittääksemme, milloin funktion derivaatta on $0$, esittelemme aluksi
+\termi{derivaattafunktio}{derivaattafunktion} käsitteen.
+
+Funktion $f(x)$ derivaattafunktio $f'(x)$ on sellainen funktio, jolle pätee
+\[ f'(x) = \lim\limits_{h \to 0} \frac{f(x+h)-f(x)}{h} \]
+kaikilla funktion $f(x)$ määrittelyjoukon alkioilla $x$.
+
+Funktiolla ei välttämättä ole derivaattafunktiota; tällöin sanomme, että funktio
+ei ole \termi{derivoituvuus}{derivoituva}. Jos funktio on derivoituva, sen
+derivaattafunktio on yksikäsitteinen.
+
 \laatikko[Derivointisäännöt]{
 	\begin{description}
 		\item[Summan derivaatta] $(f+g)'(x) = (f'+g')(x)$
@@ -8,10 +50,48 @@
 	\end{description}
 }
 
+\begin{esimerkki}
+	Todista tulon derivointisääntö $(fg)'(x) = (f'g+fg')(x)$.
+	\begin{esimratk}
+		\begin{align*}
+			(fg)'(x) &= \lim\limits_{h \to 0} \frac{(fg)(x+h)-(fg)(x)}{h} \\
+					 &= \lim\limits_{h \to 0} \frac{f(x+h)g(x+h)-f(x)g(x)}{h} \\
+					 &= \lim\limits_{h \to 0} \frac{f(x+h)g(x+h)+f(x+h)g(x)-f(x+h)g(x)-f(x)g(x)}{h} \\
+					 &= \lim\limits_{h \to 0} (\frac{f(x+h)-f(x)}{h} g(x) + f(x+h) \frac{g(x+h)-g(x)}{h}) \\
+					 &= f'(x)g(x) + f(x)g'(x) \\
+					 &= (f'g)(x) + (fg')(x) \\
+					 &= (f'g + fg')(x)
+		\end{align*}
+	\end{esimratk}
+\end{esimerkki}
+
 \laatikko[Potenssifunktion derivaatta]{
 	$\diff{x^n} = nx^{n-1}$
 }
 
+\begin{esimerkki}
+	Todista potenssifunktion derivointisääntö $\diff{x^n} = nx^{n-1}$.
+	\begin{esimratk}
+		Todistetaan väite induktiolla.
+		\begin{description}
+			\item[Alkuaskel, $n=0$] \hfill \\
+			Kyseessä on vakiofunktio. Havaitaan helposti, että tällöin derivaattafunktio on identtisesti nolla.
+			\item[Induktio-oletus, $n=k\geq0$] \hfill \\
+			$\diff{x^k} = kx^{k-1}$.
+			\item[Induktioaskel, $n=k+1$] \hfill \\
+			$\diff{x^{k+1}} = \diff{x \cdot x^k} = 1 \cdot x^k + x \cdot kx^{k-1} = (k+1)x^k$. Väite on todistettu.
+		\end{description}
+	\end{esimratk}
+\end{esimerkki}
+
 \begin{tehtavasivu}
+
+\begin{tehtava}
+	Todista summan derivointisääntö $(f+g)'(x) = (f'+g')(x)$.
+\end{tehtava}
+
+\begin{tehtava}
+	Todista osamäärän derivointisääntö $(\frac{f}{g})'(x) = (\frac{f'g-fg'}{g^2})(x)$.
+\end{tehtava}
 
 \end{tehtavasivu}
