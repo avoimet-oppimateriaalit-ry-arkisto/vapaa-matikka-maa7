@@ -20,6 +20,7 @@
 *.nav
 *.nlo
 *.out
+*.pdf
 *.pdfsync
 *.pgf-plot.*
 *.ps
@@ -33,7 +34,6 @@
 *.pyc
 *~
 .DS_Store
-content/*.pdf
+kuva-tmp-*
+revision.tex
 content/vastaukset.tex
-content/revision.tex
-content/kuva-tmp-*
