@@ -2,9 +2,19 @@
 
 % motivaatio, fysikaalinen
 % sääntöjen todistamista
+% aikaderivaatat, Newtonin notaatio
 % yhdistetyn funktion derivaatta vasta kurssissa MAA8
 
-Matematiikassa funktion kasvunopeus selvitetään \termi{derivointi}{derivoinniksi} kutsutulla operaatiolla.
+Monilla sovellusaloilla ollaan toisinaan kiinnostuneita siitä, kuinka nopeasti jokin kasvaa.
+Esimerkiksi fysiikassa nopeuden muutosta mittaa suure kiihtyvyys. Taloustieteessä voidaan olla
+kiinnostuneita vaikkapa kokonaisverokertymän kehityksestä suhteessa erilaisiin talouskehityksen mittareihin.
+
+Niin fysiikan kuin taloustieteenkin mallit nojaavat matemaattiseen perustaan.
+Tilanteista tehdään malleja, jotka sisältävät vapaita parametreja ja funktioita.
+
+Isaac Newtonin ja Gottfried Wilhelm Leibnizin pioneerityö johti 1600-luvulla
+matemaattisen analyysin syntyyn ja antoi työkalut funktioiden kasvunopeuden selvittämiseen.
+Kasvunopeus selvitetään matematiikassa \termi{derivointi}{derivoinniksi} kutsutulla operaatiolla.
 
 Funktion $f(x)$ \termi{derivaatta}{derivaattaa} pisteessä $a$ merkitään $f'(a)$.
 Formaalisti derivaatta määritellään
@@ -43,19 +53,25 @@ Funktiolla ei välttämättä ole derivaattafunktiota; tällöin sanomme, että 
 ei ole \termi{derivoituvuus}{derivoituva}. Jos funktio on derivoituva, sen
 derivaattafunktio on yksikäsitteinen.
 
-\laatikko[Derivointisäännöt]{
+\laatikko[Derivointisäännöt I]{
 	\begin{description}
 		\item[Summan derivaatta] $(f+g)'(x) = (f'+g')(x)$
+		\item[Erotuksen derivaatta] $(f-g)'(x) = (f'-g')(x)$
+		\item[Vakiolla kertomisen derivaatta] $(cf)'(x) = cf'(x)$
+	\end{description}
+}
+
+Derivointi on niin kutsuttu lineaarinen operaattori: derivaatta summasta on summa derivaatoista ja
+vakiolla kertominen voidaan suorittaa derivoimisen ulkopuolella.
+
+Sitä vastoin tulon ja osamäärän derivointisäännöt ovat astetta monimutkaisempia.
+
+\laatikko[Derivointisäännöt II]{
+	\begin{description}
 		\item[Tulon derivaatta] $(fg)'(x) = (f'g+fg')(x)$
 		\item[Osamäärän derivaatta] $(\frac{f}{g})'(x) = (\frac{f'g-fg'}{g^2})(x)$
 	\end{description}
 }
-
-Erikoistapauksina saadaan vielä mm.
-\begin{description}
-	\item[Erotuksen derivaatta] $(f-g)'(x) = (f'-g')(x)$
-	\item[Vakiolla kertomisen derivaatta] $(cf)'(x) = cf'(x)$
-\end{description}
 
 \begin{esimerkki}
 	Todista tulon derivointisääntö $(fg)'(x) = (f'g+fg')(x)$.
@@ -94,9 +110,45 @@ Erikoistapauksina saadaan vielä mm.
 Potenssifunktioita on helppo derivoida, joten myös polynomi- ja rationaalifunktioita on helppo derivoida.
 Kursseilla MAA8 ja MAA9 tutustumme myös muiden funktioiden derivointiin.
 
-% jotain voisi puhua Taylorin sarjojen kivuudesta?
+Derivoida voidaan useiden muuttujien suhteen. Derivoinnin muuttuja jätetään usein merkitsemättä, jos se on
+asiayhteydestä selvä.
+
+\begin{esimerkki}
+	Derivoi $f(x,y)=x^2+xy$ muuttujan
+	\begin{alakohdatrivi}
+		\alakohta{$x$}
+		\alakohta{$y$}
+		\alakohta{$z$}
+	\end{alakohdatrivi}
+	suhteen. % toisaalta notaatio doo_1, doo_2, doo_3 jne. on myös aika kiva
+	\begin{esimvast}
+		\begin{alakohdatrivi}
+			\alakohta{$2x+y$}
+			\alakohta{$x$}
+			\alakohta{$0$}
+		\end{alakohdatrivi}
+	\end{esimvast}
+\end{esimerkki}
 
 \begin{tehtavasivu}
+
+\begin{tehtava}
+	Laske funktioiden derivaatat pisteessä $a = 0$.
+	\begin{alakohdat}
+		\alakohta{$f_1(x)=x$}
+		\alakohta{$f_2(x)=x^2$}
+		\alakohta{$f_3(x)=x2^x$}
+		\alakohta{$f_4(x)=\frac1{x^2+1}$}
+	\end{alakohdat}
+	\begin{vastaus}
+		\begin{alakohdat}
+			\alakohta{$f'_1(0)=1$}
+			\alakohta{$f'_2(0)=0$}
+			\alakohta{$f'_3(0)=1$}
+			\alakohta{$f'_4(0)=0$}
+		\end{alakohdat}
+	\end{vastaus}
+\end{tehtava}
 
 \begin{tehtava}
 	Todista summan derivointisääntö $(f+g)'(x) = (f'+g')(x)$.
@@ -104,6 +156,24 @@ Kursseilla MAA8 ja MAA9 tutustumme myös muiden funktioiden derivointiin.
 
 \begin{tehtava}
 	Todista osamäärän derivointisääntö $(\frac{f}{g})'(x) = (\frac{f'g-fg'}{g^2})(x)$.
+\end{tehtava}
+
+\begin{tehtava}
+	Derivoi polynomit.
+	\begin{alakohdat}
+		\alakohta{$x^2+3x+1$}
+		\alakohta{$x^5+x^3+x$}
+		\alakohta{$x^3+6x^2-2x-2$}
+		\alakohta{$4x^4+3x^3+2x^2+x$}
+	\end{alakohdat}
+	\begin{vastaus}
+		\begin{alakohdat}
+			\alakohta{$2x+3$}
+			\alakohta{$5x^4+3x^2+1$}
+			\alakohta{$3x^2+12x-2$}
+			\alakohta{$16x^3+9x^2+4x+1$}
+		\end{alakohdat}
+	\end{vastaus}
 \end{tehtava}
 
 \end{tehtavasivu}
