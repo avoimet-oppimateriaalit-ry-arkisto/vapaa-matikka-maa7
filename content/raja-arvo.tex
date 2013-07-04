@@ -4,7 +4,19 @@
 
 Rationaalifunktio $f: \rr \backslash \{0 \} \to \rr$, $f(x) = \frac{x^2}{x}$ voidaan määrittelyjoukossaan sieventää muotoon $f(x) = x$. Mitä jos $x = 0$? Lauseketta $\frac{0}{0}$ ei ole määritelty, joten funktiota ei ole mielekästä jatkaa nollassa samalla lausekkeella. Funktion kuvaaja näyttää kuitenkin suoralta.
 
-KUVA
+\begin{luoKuva}{raja-arvo_esimerkki}
+	kuvaaja.pohja(-2, 2, -2, 2, leveys=5)
+
+	kuvaaja.piirra("x")
+	
+	geom.ympyra((0,0), 0.04)
+	vari("white")
+	geom.ympyra((0,0), 0.015)	
+\end{luoKuva}
+
+\begin{center}
+	\naytaKuva{raja-arvo_esimerkki}
+\end{center}
 
 Itse pistettä $x = 0$ lukuun ottamatta funktio käyttäytyy siististi, ja tuntuu luontevalta määritellä, että $f(x) = 0$. $x$:n lähestyessä nollaa myös $f(x)$ näyttää lähestyvän rajatta nollaa.
 
