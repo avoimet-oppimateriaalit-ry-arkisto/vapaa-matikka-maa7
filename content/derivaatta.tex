@@ -16,7 +16,7 @@ Tilanteista tehdään malleja, jotka sisältävät vapaita parametreja ja funkti
 
 Isaac Newtonin ja Gottfried Wilhelm Leibnizin pioneerityö johti 1600-luvulla
 matemaattisen analyysin syntyyn ja antoi työkalut funktioiden kasvunopeuden selvittämiseen.
-Kasvunopeus selvitetään matematiikassa \termi{derivointi}{derivoinniksi} kutsutulla operaatiolla.
+Kasvunopeus selvitetään matematiikassa \termi{derivointi}{derivointina} tunnetulla operaatiolla.
 
 \section{Derivaatta}
 
@@ -44,12 +44,8 @@ $f'(a)$ on funktion $f(x)$ tangentin kulmakerroin pisteessä $a$.
 
 \section{Derivaattafunktio}
 
-Erityisen mielenkiintoisia ovat kysymykset, jotka ovat muotoa
-''milloin funktio ei kasva?'' Ne vastaavat tilannetta, jossa tangentti
-on vaakasuora eli funktion derivaatta on $0$.
-
-Selvittääksemme, milloin funktion derivaatta on $0$, esittelemme aluksi
-\termi{derivaattafunktio}{derivaattafunktion} käsitteen.
+On mielekästä yleistää pisteittäin määriteltyä derivaatan käsitettä.
+Luonnollinen yleistys on \termi{derivaattafunktio}{derivaattafunktio}.
 
 Funktion $f(x)$ derivaattafunktio $f'(x)$ on sellainen funktio, jolle pätee
 \[ f'(x) = \lim\limits_{h \to 0} \frac{f(x+h)-f(x)}{h} \]
@@ -120,13 +116,13 @@ Sitä vastoin tulon ja osamäärän derivointisäännöt ovat astetta monimutkai
 \end{esimerkki}
 
 Potenssifunktioita on helppo derivoida, joten myös polynomi- ja rationaalifunktioita on helppo derivoida.
-Kursseilla MAA8 ja MAA9 tutustumme myös muiden funktioiden derivointiin.
+Myöhemmillä kursseilla opitaan derivoimaan muitakin funktioita.
 
 Derivoida voidaan useiden muuttujien suhteen. Derivoinnin muuttuja jätetään usein merkitsemättä, jos se on
 asiayhteydestä selvä.
 
 \begin{esimerkki}
-	Derivoi $f(x,y)=x^2+xy$ muuttujan
+	Derivoi $f(x,y,z)=x^2+xy$ muuttujan
 	\begin{alakohdatrivi}
 		\alakohta{$x$}
 		\alakohta{$y$}
@@ -144,6 +140,39 @@ asiayhteydestä selvä.
 
 \section{Ääriarvojen määrittäminen}
 
+Derivaattaa käyttäen voidaan ratkaista monia yksinkertaisia optimointitehtäviä.
+Tätä motivoi ''ääriarvolause.''
+
+\laatikko[''Ääriarvolause'']{
+	Avoimella välillä derivoituva funktio voi saavuttaa
+	lokaalin maksimin tai minimin vain sen derivaattafunktion nollakohdissa.
+}
+
+Lokaali ääriarvo on maksimi, jos toinen derivaatta pisteessä on negatiivinen ja minimi, jos
+toinen derivaatta pisteessä on positiivinen. Jos toinen derivaatta on $0$, ääriarvo voi olla
+maksimi, minimi tai ns. satulapiste.
+
+\begin{esimerkki}
+	Määritä funktion $f(x)=x^3-3x$ lokaalit maksimit ja minimit välillä $\aavali{0}{10}$.
+	\begin{esimratk}
+		Derivaattafunktioksi saadaan $f'(x)=3x^2-3$.
+		\begin{align*}
+			f'(x) &= 0 \\
+			3x^2-3 &= 0 \\
+			3x^2 &= 3 \\
+			x^2 &= 1 \\
+			x &= \pm 1
+		\end{align*}
+		Derivaattafunktion nollakohdista vain $x = 1$ sijaitsee välillä $\aavali{0}{10}$.
+		Pisteessä $x = 1$ funktio saa arvon $f(1) = -2$. Toinen derivaatta on $f''(x)=6x$,
+		joka saa pisteessä $x = 1$ positiivisen arvon. Siis funktiolla on lokaali minimi $-2$
+		pisteessä $1$.
+	\end{esimratk}
+	\begin{esimvast}
+		$f(1) = -2$, lokaali minimi
+	\end{esimvast}
+\end{esimerkki}
+
 \begin{tehtavasivu}
 
 \begin{tehtava}
@@ -151,7 +180,7 @@ asiayhteydestä selvä.
 	\begin{alakohdat}
 		\alakohta{$f_1(x)=x$}
 		\alakohta{$f_2(x)=x^2$}
-		\alakohta{$f_3(x)=x2^x$}
+		\alakohta{$f_3(x)=x \cdot 2^x$}
 		\alakohta{$f_4(x)=\frac1{x^2+1}$}
 	\end{alakohdat}
 	\begin{vastaus}
