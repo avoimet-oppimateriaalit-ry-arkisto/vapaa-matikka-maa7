@@ -20,8 +20,6 @@ Kasvunopeus selvitetään matematiikassa \termi{derivointi}{derivointina} tunnet
 
 \section{Derivaatta}
 
-blaa
-
 Funktion $f(x)$ \termi{derivaatta}{derivaattaa} pisteessä $a$ merkitään $f'(a)$.
 Formaalisti derivaatta määritellään
 \[ f'(a) = \lim\limits_{x \to a} \frac{f(x)-f(a)}{x-a} \]
@@ -30,9 +28,9 @@ tai yhtäpitävästi
 Tämä määritelmä tunnetaan nimellä \termi{erotusosamäärän raja-arvo}{erotusosamäärän raja-arvo}.
 
 \begin{luoKuva}{derivaatta_esimerkki}
-    kuvaaja.pohja(-1, 5, -1, 5)
+    kuvaaja.pohja(-1, 10, -1, 10, leveys=5)
     
-    kuvaaja.piirra("x**2", nimi = "$x^2$")
+    kuvaaja.piirra("x**2")
     
     vari("blue")
     kuvaaja.piirra("4*x-4")
