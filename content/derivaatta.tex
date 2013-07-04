@@ -1,11 +1,10 @@
 \chapter{Derivaatta}
 
-\section{Johdanto}
-
 % motivaatio, fysikaalinen
 % sääntöjen todistamista
 % aikaderivaatat, Newtonin notaatio
-% yhdistetyn funktion derivaatta vasta kurssissa MAA8
+
+\section{Johdanto}
 
 Monilla sovellusaloilla ollaan toisinaan kiinnostuneita siitä, kuinka nopeasti jokin kasvaa.
 Esimerkiksi fysiikassa nopeuden muutosta mittaa suure kiihtyvyys. Taloustieteessä voidaan olla
@@ -187,6 +186,28 @@ maksimi, minimi tai ns. satulapiste.
 	\end{esimratk}
 	\begin{esimvast}
 		$f(1) = -2$, lokaali minimi
+	\end{esimvast}
+\end{esimerkki}
+
+\begin{esimerkki}
+	Pyöräilijän nopeutta yksikössä $\mathrm{\frac{m}{s}}$ mallinnetaan funktiolla % huonosti valittu malli, funktio ei fluktuoi
+	\[ v(t) = -0,0000013 t^2 + 0,0052 t + 4,3, \]
+	missä $t$ on aika lähdöstä sekunteina. Millä ajanhetkellä pyöräilijä saavuttaa suurimman nopeutensa, ja mikä se on?
+	\begin{esimratk}
+		Derivoimalla saadaan $a(t) = \dot{v}(t) = -0,0000026 t + 0,0052$.
+		\begin{align*}
+			a(t) &= 0 \\
+			-0,0000026 t + 0,0052 &= 0 \\
+			-0,0000026 t &= -0,0052 \\
+			t &= 2000
+		\end{align*}
+		Sijoittamalla saadaan $v(2000) = 9,5$.
+		Vaihdetaan yksiköt:
+		\[ 2000 \; \mathrm{s} = 33 \; \mathrm{min} \; 20 \; \mathrm{s} \]
+		\[ 9,5 \; \mathrm{\frac{m}{s}} =  34,2 \; \mathrm{\frac{km}{h}} \]
+	\end{esimratk}
+	\begin{esimvast}
+		Pyöräilijä saavuttaa suurimman nopeutensa $34,2 \; \mathrm{\frac{km}{h}}$ ajettuaan $33 \; \mathrm{min} \; 20 \; \mathrm{s}$.
 	\end{esimvast}
 \end{esimerkki}
 
