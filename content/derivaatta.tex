@@ -20,6 +20,8 @@ Kasvunopeus selvitetään matematiikassa \termi{derivointi}{derivoinniksi} kutsu
 
 \section{Derivaatta}
 
+blaa
+
 Funktion $f(x)$ \termi{derivaatta}{derivaattaa} pisteessä $a$ merkitään $f'(a)$.
 Formaalisti derivaatta määritellään
 \[ f'(a) = \lim\limits_{x \to a} \frac{f(x)-f(a)}{x-a} \]
@@ -27,16 +29,33 @@ tai yhtäpitävästi
 \[ f'(a) = \lim\limits_{h \to 0} \frac{f(a+h)-f(a)}{h}. \]
 Tämä määritelmä tunnetaan nimellä \termi{erotusosamäärän raja-arvo}{erotusosamäärän raja-arvo}.
 
+\begin{luoKuva}{derivaatta_esimerkki}
+    kuvaaja.pohja(-1, 5, -1, 5)
+    
+    kuvaaja.piirra("x**2", nimi = "$x^2$")
+    
+    vari("blue")
+    kuvaaja.piirra("4*x-4")
+   
+    vari("red")
+    kuvaaja.piste((2, 4))
+\end{luoKuva}
+
 \begin{esimerkki}
-	Laske funktion $f(x) = x^2$ derivaatta pisteessä $3$.
+	Laske funktion $f(x) = x^2$ derivaatta pisteessä $2$.
 	\begin{esimratk}
 		\begin{align*}
-			f'(3) &= \lim\limits_{x \to 3} \frac{f(x)-f(3)}{x-3} \\
-				  &= \lim\limits_{x \to 3} \frac{x^2-9}{x-3} \\
-				  &= \lim\limits_{x \to 3} (x+3) \\
-				  &= 6
+			f'(3) &= \lim\limits_{x \to 2} \frac{f(x)-f(2)}{x-2} \\
+				  &= \lim\limits_{x \to 2} \frac{x^2-4}{x-2} \\
+				  &= \lim\limits_{x \to 2} (x+2) \\
+				  &= 4
 		\end{align*}
 	\end{esimratk}
+	
+	\begin{center}
+		\naytaKuva{derivaatta_esimerkki}
+	\end{center}
+	
 \end{esimerkki}
 
 Funktion $f(x)$ derivaatalle pisteessä $a$ on geometrinen tulkinta:
