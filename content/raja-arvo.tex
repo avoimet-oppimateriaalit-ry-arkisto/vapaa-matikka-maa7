@@ -1,5 +1,7 @@
 \chapter{Raja-arvo}
 
+\section{Johdanto}
+
 Rationaalifunktio $f: \rr \backslash \{0 \} \to \rr$, $f(x) = \frac{x^2}{x}$ voidaan määrittelyjoukossaan sieventää muotoon $f(x) = x$. Mitä jos $x = 0$? Lauseketta $\frac{0}{0}$ ei ole määritelty, joten funktiota ei ole mielekästä jatkaa nollassa samalla lausekkeella. Funktion kuvaaja näyttää kuitenkin suoralta.
 
 KUVA
@@ -18,18 +20,34 @@ KUVA
 
 Kun $x$ on positiivinen ja lähestyy nollaa, funktion arvot kasvavat äärettömyyksiin. Ääretön ei kuitenkaan sovi funktion arvoksi. Toisaalta kun $x$ on negatiivinen funktion arvot näyttävät pienenevän rajatta. Tässä tapauksessa funktiolla ei ole raja-arvoa nollassa. Lauseke $\frac{1}{0}$ ei tarjoa oikeastaan paljoakaan, mutta tutkimalla funktion arvoa nollan lähellä voidaan funktiota kuvata jo aivan uudella tavalla.
 
+\section{Määritelmä}
+
 %semiformaali määritelmä
 
-% jotain hyvin epäjatkuvia funktioita
-% jatkuvuuden käsite
+\section{Esimerkkejä}
 
-\laatikko[Raja-arvosäännöt]{
+% jotain hyvin epäjatkuvia funktioita
+
+\section{Raja-arvosäännöt I}
+
+\laatikko[Raja-arvosäännöt I]{
 	\begin{description}
 		\item[Summan raja-arvo] $\lim\limits_{x \to a} (f+g)(x) = \lim\limits_{x \to a} f(x) + \lim\limits_{x \to a} g(x)$
+		\item[Erotuksen raja-arvo] $\lim\limits_{x \to a} (f-g)(x) = \lim\limits_{x \to a} f(x) - \lim\limits_{x \to a} g(x)$
+		\item[Vakiolla kertomisen raja-arvo] $\lim\limits_{x \to a} (cf)(x) = c \cdot \lim\limits_{x \to a} f(x)$
+	\end{description}
+}
+
+\section{Raja-arvosäännöt II}
+
+\laatikko[Raja-arvosäännöt II]{
+	\begin{description}
 		\item[Tulon raja-arvo] $\lim\limits_{x \to a} (fg)(x) = \lim\limits_{x \to a} f(x) \cdot \lim\limits_{x \to a} g(x)$
 		\item[Osamäärän raja-arvo] $\lim\limits_{x \to a} (\frac{f}{g})(x) = \frac{\lim\limits_{x \to a} f(x)}{\lim\limits_{x \to a} g(x)}$
 	\end{description}
 }
+
+\section{Jatkuvuus}
 
 \begin{tehtavasivu}
 
