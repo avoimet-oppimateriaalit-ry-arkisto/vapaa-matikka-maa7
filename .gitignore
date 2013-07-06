@@ -1,6 +1,7 @@
 *.aux
 *.bbl
 *.blg
+*.dep
 *.dvi
 *.fdb_latexmk
 *.glg
@@ -15,6 +16,7 @@
 *.log
 *.lot
 *.maf
+*.md5
 *.mtc
 *.mtc0
 *.nav
@@ -24,6 +26,7 @@
 *.pdfsync
 *.pgf-plot.*
 *.ps
+*.pyc
 *.snm
 *.sty.backup
 *.synctex.gz
@@ -31,9 +34,8 @@
 *.tex.backup
 *.toc
 *.vrb
-*.pyc
 *~
 .DS_Store
 kuva-tmp-*
 revision.tex
-content/vastaukset.tex
+content/LIITE_vastaukset.tex
