@@ -2,7 +2,7 @@
 
 \section{Johdanto}
 
-Rationaalifunktio $f: \rr \backslash \{0 \} \to \rr$, $f(x) = \frac{x^2}{x}$ voidaan määrittelyjoukossaan sieventää muotoon $f(x) = x$. Mitä jos $x = 0$? Lauseketta $\frac{0}{0}$ ei ole määritelty, joten funktiota ei ole mielekästä jatkaa nollassa samalla lausekkeella. Funktion kuvaaja näyttää kuitenkin suoralta.
+Rationaalifunktio $f: \rr \backslash \{0 \} \to \rr$, $f(x) = \frac{x^2}{x}$ voidaan määrittelyjoukossaan sieventää muotoon $f(x) = x$. Entä jos $x = 0$? Lauseketta $\frac{0}{0}$ ei ole määritelty, joten funktiota ei ole mielekästä jatkaa nollassa samalla lausekkeella. Funktion kuvaaja näyttää kuitenkin suoralta.
 
 \begin{luoKuva}{raja-arvo_esimerkki}
 	kuvaaja.pohja(-2, 2, -2, 2, leveys=5)
@@ -20,11 +20,11 @@ Rationaalifunktio $f: \rr \backslash \{0 \} \to \rr$, $f(x) = \frac{x^2}{x}$ voi
 
 Itse pistettä $x = 0$ lukuun ottamatta funktio käyttäytyy siististi, ja tuntuu luontevalta määritellä, että $f(x) = 0$. $x$:n lähestyessä nollaa myös $f(x)$ näyttää lähestyvän rajatta nollaa.
 
-Lukiossa ja peruskoulussa on totuttu ns. \termi{jatkuva funktio}{jatkuviin funktioihin}, eli käytännössä funktioihin, joiden kuvaaja on katkeamaton. Jatkuvilla funktioilla on monia hyödyllisiä ominaisuuksia, mutta myös \termi{epäjatkuva funktio}{epäjatkuvat funktiot}, funktiot jotka ovat "katkonaisia" näyttävät käyttäytyvän välillä mukavasti.
+Lukiossa ja peruskoulussa on totuttu ns. \termi{jatkuva funktio}{jatkuviin funktioihin}, eli käytännössä funktioihin, joiden kuvaaja on katkeamaton. Jatkuvilla funktioilla on monia hyödyllisiä ominaisuuksia, mutta myös \termi{epäjatkuva funktio}{epäjatkuvat funktiot}, funktiot jotka ovat ''katkonaisia'' näyttävät käyttäytyvän toisinaan mukavasti.
 
-Esimerkin avulla huomattiin, että vaikka $f(x)$ ei ollut määritelty origossa, näyttivät funktion arvot lähestyvän nollaa.  Tällöin sanotaan, että funktiolla on \termi{raja-arvo}{raja-arvo} nollassa, nolla.
+Esimerkin avulla huomattiin, että vaikka $f(x)$ ei ollut määritelty origossa, funktion arvot lähestyivät nollaa kummallakin puolella origoa. Tällöin sanotaan, että funktiolla on \termi{raja-arvo}{raja-arvo} jossakin pisteessä, tässä tapauksessa raja-arvo $0$ pisteessä $x=0$.
 
-Raja-arvo on erittäin tärkeä käsite matematiikassa. Intuitiivisesti sillä tarkoitetaan arvoa, jota funktion arvot lähestyvät jossain pisteessä. Usein tutkittavan funktion arvoa voi olla vaikea analysoida, mutta pisteen lähistöllä funktio käyttäytyy mukavasti. Raja-arvo on ikään kuin tapa testata, miten funktio suhtautuu muutokseen.
+Raja-arvo on erittäin tärkeä käsite matematiikassa. Intuitiivisesti sillä tarkoitetaan arvoa, jota funktion arvot lähestyvät jossain pisteessä. %Usein tutkittavan funktion arvoa voi olla vaikea analysoida, mutta pisteen lähistöllä funktio käyttäytyy mukavasti. Raja-arvo on ikään kuin tapa testata, miten funktio suhtautuu muutokseen.
 
 Miten funktio  $f: \rr \backslash \{0 \} \to \rr$, $f(x) = \frac{1}{x}$ käyttäytyy nollassa? Funktiota ei ole mielekästä jatkaa nollassa, mutta nyt luonnollista täytepistettä ei näytä löytyvän.
 
@@ -69,5 +69,32 @@ Kun $x$ on positiivinen ja lähestyy nollaa, funktion arvot kasvavat äärettöm
 \section{Jatkuvuus}
 
 \begin{tehtavasivu}
+
+% tehtäviä epäjatkuvista funktioista
+
+\begin{tehtava}
+	Olkoon $f(x)=x^5$ ja $g(x)=x^3-2x$. Määritä raja-arvot.
+	\begin{alakohdat}
+		\alakohta{$\lim\limits_{x \to 2} f(x)$}
+		\alakohta{$\lim\limits_{x \to 2} g(x)$}
+		\alakohta{$\lim\limits_{x \to 2} (f+g)(x)$}
+		\alakohta{$\lim\limits_{x \to 2} (fg)(x)$}		
+	\end{alakohdat}
+	\begin{vastaus}
+		\begin{alakohdat}
+			\alakohta{$32$}
+			\alakohta{$4$}
+			\alakohta{$36$}
+			\alakohta{$128$}
+		\end{alakohdat}
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	Funktion $f(x)$ raja-arvo pisteessä $x=1$ on $5$. Määritellään lisäksi $g(x) = x^2+3$. Mikä on funktion $h(x) = 4f(x) + 3g(x)$ raja-arvo pisteessä $x=1$?
+	\begin{vastaus}
+		$32$
+	\end{vastaus}
+\end{tehtava}
 
 \end{tehtavasivu}
